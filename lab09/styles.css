@@ -1,0 +1,27 @@
+body{font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3E4147;
+    background-color: #F7F9FE;
+}
+
+h1, h2 {color:#373B44;}
+p{color: #3E4147; }
+a {color:#515151;}
+
+nav{background-color:#DCE8EB; }
+nav a{color: #49708A; }
+nav a:hover{background-color: #D0E0EB;}
+nav{padding:10px;
+    margin-botton:30px
+}
+
+h1{font-size: 2em;}
+h2{font-size: 1.5em;}
+
+.evenrow {background-color:#748B83;}
+
+/* Unit 09 */
+@media only screen and (max-width: 800px){
+    nav a {display: block; size: 100%; padding: 5px;}
+
+    span {display:none;}
+        }
