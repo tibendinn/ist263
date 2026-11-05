@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <style>
+        nav{
+            background-color: black;
+            padding: 10px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+        }
+        nav div{
+            padding: 5px;
+            display:flex
+        }
+        .flexend{
+            justify-content: flex-end;
+        }
+        .flexspacearound{
+            justify-content: space-around;
+        }
+        .flexspacebetween {
+            justify-content: space-between;
+        }
+        .splitnav{
+            justify-content: space-between;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Navigation</h1>
+
+    <h2>Flex End</h2>
+    <nav class="flexend">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+
+    <h2>Flex Space Around</h2>
+    <nav class="flexspacearound">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+
+    <h2>Flex Space Between</h2>
+    <nav class="flexspacebetween">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+
+    <h2>Split Navigation</h2>
+    <nav class="splitnav">
+        <div>
+             <div>Home</div>
+            <div>About Us</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </div>
+        <div>
+            <div>Instagram</div>
+            <div>Tik Tok</div>
+        </div>
+       
+    </nav>
+    
+</body>
+</html>
