@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Nav</title>
+    <!--
+    CSS
+    1. Large - no hamburger 
+    2. Small - show hamburger 
+    3. Large - no X
+    4. Small - show X
+    5. Large - links should be side by side
+    6. Small - links should stack 
+
+    JavaScript
+    7. click on the hamburger links should show
+    8. Click on X hide the links 
+    
+    -->
+
+    <style>
+        #hamburger {width: 40px;}
+        .firstrow {display:flex; justify-content: space-between;}
+        @media only screen and (min-width: 900px) {
+            #hamburger, #close {display: none;}
+        }
+        @media only screen and (max-width:899px){
+            a {
+                display:block;
+            }
+           #navitems{
+                display:none;
+            }
+        }
+    </style>
+
+    <script>
+        function showNav(){
+            document.getElementById("navitems").style.display = "block";
+        }
+
+        function hideNav(){
+            document.getElementById("navitems").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="firstrow">
+        <div><img id="hamburger" src="https://laferger.github.io/ist263/images/hamburger.png" alt="hamburger icon" onclick = "showNav();"></div>
+        <div id="close" onclick ="hideNav();">X</div>
+    </div>    
+
+<nav id="navitems">
+    <a href="">About</a>
+    <a href="">Skills</a>
+    <a href="">Contact</a>
+</nav>
+
+</body>
+</html>
