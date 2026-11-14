@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+       <style>
+        /*General Styling*/
+        body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #3E4147;
+            background-color: #F0E5E1;
+        }
+
+        h1, h2 {color:#4E3B3B;}
+        p{color: #4E3B3B; }
+        a {color:#4E3B3B;}        
+
+        h1{font-size: 2em;}
+        h2{font-size: 1.5em;}
+
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+        body {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;    
+        }
+        /*Nav*/
+
+        nav a{color: #F8E2D1;; }
+        nav a:hover{background-color: #6E3329;}
+        
+
+        nav{
+            background-color: #8F4538;
+            padding: 10px;
+            display: flex;
+        }
+        nav div{
+            padding: 5px;
+            display:flex
+        }
+        .flexspacearound{
+            justify-content: space-around;
+        }
+
+        #hamburger {background:none; border: none;}
+        .firstrow {display:flex; justify-content: space-between;}
+
+        /*Flexbox for Content*/
+
+        .about {display: flex;}
+			.about article {flex: 1; padding: 20px;}
+            .article1, .article2 {margin: 10px}
+            .article1 { border-radius: 1em;}
+            
+        /*IMG Float*/
+
+        .me{
+                float: right;
+                margin: 0px 0px 20px 20px;
+                padding: 20px
+            }
+
+        /*Form*/
+
+         .form{
+                clear:both;
+         }
+            
+         .form {display: flex}
+            .form {background-color: #DDAA8D;
+                    padding: 20px;
+                    margin: 10px;
+                    border-radius: 1em;
+                }
+                
+       
+        @media only screen and (min-width: 900px) {
+            #hamburger, #close {display: none;}
+        }
+        @media only screen and (max-width:899px){
+            a {
+                display:block;
+            }
+            #navitems{
+                display:none;
+            }
+            #navitems.open{
+                display:flex;
+            }
+        }
+
+    </style>
+
+    <script>
+        function showNav(){
+            document.getElementById("navitems").classList.add("open"); /* Was having trouble getting my nav to show after interacting w hamburger nav, so looked up how to fix on W3 Schools */
+        }
+
+        function hideNav(){
+            document.getElementById("navitems").classList.remove("open");
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    <div class="firstrow">
+        <div><i id="hamburger" class="fa fa-bars" onclick="showNav();"></i></div> <!--I got this from W3 schools because I was having a hard time finding icons that looked pleasing on creative commons, to my understanding it is free to use-->
+        <div><i id="close" class="fa fa-times" onclick="hideNav();"></i></div> <!--I got this from W3 schools because I was having a hard time finding icons that looked pleasing on creative commons, to my understanding it is free to use-->
+    </div>
+
+    <nav class="flexspacearound" id="navitems">
+        <a href="https://tibendinn.github.io/ist263/project5/home.html">Home</a>
+        <a href="https://tibendinn.github.io/ist263/project5/chicken.html">Crispy Chicken Thighs & Mushroom Risotto</a>
+        <a href="https://tibendinn.github.io/ist263/project5/steak.html">Steak Frites</a>
+    </nav>
+</header>
+
+<main>
+
+<section>
+
+<header>
+<h1 >Red Book Cooking</h1>
+<p>
+Imagine spills from recipes tried & failed, notes of changes & future recommendations, and anything
+else you can possibly imagine shoved between its pages - think of this resource as a digital cookbook.
+Cookbooks not only contain lists but commentaries, best practices, and new skills to master if you want 
+to take your cooking up a notch. You can expect to find all this & more in the following recipes. 
+</p>
+</header>
+
+
+<article>
+
+<h3>Recipes of the Week!</h3>
+
+<p> If you are in the mood for a cozy weeknight dinner that is ready in just under an hour, check out the <strong><a href="https://tibendinn.github.io/ist263/project5/chicken.html">Crispy Chicken Thighs & Mushroom Risotto</a></strong>. On the other hand, the classic <strong><a href="https://tibendinn.github.io/ist263/project5/steak.html">Steak Frites</a></strong> is a must have for a special weekend dinner for two. Pick one or try both - the choice is yours! </p>
+
+</article>
+ <div class="about">
+            <article class="article1">
+                <h3>Why Cook?</h3>
+                <p>Cooking is more than a means to an end – it is a way to connect with people and produce something out of nothing. My favorite memories have been formed in the kitchen – from cooking with my mom to making truly something out of nothing with my freshman year roommate (shoutout microwaved cheesy nachos!).</p>
+
+                <p>I have gotten more adventurous with my cooking as I’ve connected with others who push me to try new techniques or simply cook with the burner on low … and be patient.</p>
+            </article>
+            <article class="article2">     
+                <h3>Why Red Book Cooking?</h3>         
+                <p>A worn red leather cookbook has sat in my family’s kitchen for as long as I can remember. It contains recipes from prior generations with recipe cards marked in my Yiayia’s signature uppercase handwriting. Although my Yiayia’s recipes were the first to enter the book, my mom has since added her own touch. Clippings from magazines and scrap pieces of paper began to populate the pages. A secret mac n’ cheese recipe entered the book as my mom grew closer to her grandmother-in-law. The Red Book evolved and became a vault.</p>  
+                <p>Red Book Cooking aims to reveal these recipes and share pieces of my family's cooking with you!</p>                  
+            </article>
+        </div>
+
+<article>
+<h3>Who Am I?</h3>
+<img src="../project5/thalia.jpeg" alt="Thalia Image" height=300 class="me">
+
+<p>
+I am a student at Syracuse University majoring in Policy Studies and Information Management & 
+Technology. I have previously interned for Rochester Housing Authority where I worked on an Eviction 
+Prevention Study. I currently work for the City of Syracuse in Neighborhood and Business Development 
+as a Neighborhood Planning Intern. Outside of work and school, you can find me at the pottery studio, 
+sailing on Caz Lake with the SU Sailing Team, or most obviously, COOKING!
+</p><br>
+
+<p><strong>Grab your aprons and follow along for recipes, tips & tricks, and more!</strong></p>
+
+</article>
+
+</section>
+
+<section class = form> 
+
+<h3>What do you want to see next week?</h3>
+<div>
+    <form action="https://formspree.io/f/xwlpkwnr" method="post">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname"><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="question"> What would you like to see next week?</label>
+    <textarea id = "question" name="question"></textarea><br>
+
+    <p>Would you like to subscribe to the monthly newsletter?</p>
+    <input type="radio" id="newsletter1" name="newsletter" value="yes">
+    <label for="newsletter1">Yes</label>
+    <input type="radio" id="newsletter2" name="newsletter" value="no">
+    <label for="newsletter2">No</label> <br>
+
+    <input type="submit" value="Submit">
+    </form>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+    <hr>
+    <p>&copy;2026<span class ="quote"> Red Book Cooking</span></p>
+</footer>
+
+</body>
+</html>
+
